@@ -1629,10 +1629,10 @@ a {
 }
 
       .sidebar {
-        width: 260px;
+        width: 360px;
       }
       .main-container {
-        margin-left: 260px;
+        margin-left: 360px;
       }
     
       .post-item .right .feature-container {
