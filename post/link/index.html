@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>CFFC公告 | CFFC Offical Site</title>
+<title>友情链接 | CFFC Offical Site</title>
 <meta name="description" content="CFFC 官方网站">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,6 +12,12 @@
 <link rel="shortcut icon" href="https://cffc.site/favicon.ico?v=1556282689872">
 <link rel="stylesheet" href="https://cffc.site/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -100,53 +106,36 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: CFFC公告</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://cffc.site/post/Domain-List">
-                  <h2 class="post-title">目前的域名分配情况</h2>
-                </a>
-                <div class="post-date">
-                  2019-04-21
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://cffc.site/post/Domain-List">
-                  <div class="feature-container" style="background-image: url('https://cffc.site/post-images/Domain-List.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://cffc.site/post/First-Post">
-                  <h2 class="post-title">CFFC官网建设正式完成</h2>
-                </a>
-                <div class="post-date">
-                  2019-04-20
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://cffc.site/post/First-Post">
-                  <div class="feature-container" style="background-image: url('https://cffc.site/post-images/First-Post.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">友情链接</h2>
+            <div class="post-date">2019-04-26</div>
+            
+            <div class="post-content">
+              <blockquote>
+<p>建设中</p>
+</blockquote>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://cffc.site/tag/lHQTT7om7" class="tag">
+                    建设中
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -168,6 +157,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '416a0d74eaa17e75251f',
+        clientSecret: '953ed5028483af1261a57b21ca92b253228f09c0',
+        repo: 'steamfinder.github.io',
+        owner: 'SteamFinder',
+        admin: ['SteamFinder'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
