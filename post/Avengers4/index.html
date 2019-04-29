@@ -1,15 +1,18 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>复仇者联盟4 | CFFC Offical Site</title>
 <meta name="description" content="CFFC官方网站">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://m.cffc.site/favicon.ico?v=1556538753011">
+<link rel="shortcut icon" href="https://m.cffc.site/favicon.ico?v=1556538787093">
 <link rel="stylesheet" href="https://m.cffc.site/styles/main.css">
 
 
@@ -23,98 +26,91 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
 
 
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://m.cffc.site">
-        <img src="https://m.cffc.site/images/avatar.png?v=1556538753011" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://m.cffc.site">
+        <img class="avatar" src="https://m.cffc.site/images/avatar.png?v=1556538787093" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://m.cffc.site">
         <h1 class="site-title">CFFC Offical Site</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
         
-          <a href="/post/link" class="site-nav">
+          <a href="/post/link" class="menu purple-link">
             友链
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://steamfinder.github.io" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      CFFC官方网站
-    </div>
-    <div class="site-footer">
-      Powered by CFFC Technology Group
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">复仇者联盟4</h2>
-            <div class="post-date">2019-04-26</div>
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://m.cffc.site/post-images/Avengers4.jpg')">
+            </div>
+          
+          <h2 class="post-title">复仇者联盟4</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-04-26</span>
             
-              <div class="feature-container" style="background-image: url('https://m.cffc.site/post-images/Avengers4.jpg')">
-              </div>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://m.cffc.site/tag/wY0-vIrWZ">
+                    娱乐
+                    
+                  </a>
+                
+              </span>
             
-            <div class="post-content">
-              <blockquote>
+          </div>
+          <div class="post-content">
+            <blockquote>
 <p>严重剧透，请谨慎观看！
 <img src="https://m.cffc.site/post-images/1556270142377.jpg" alt="">
 <img src="https://m.cffc.site/post-images/1556270148807.jpg" alt="">
@@ -130,46 +126,49 @@
 开场鹰眼教女儿射箭，然后全家消失除了他自己。然后钢铁侠星云飞船上，快没氧气了结果惊奇队长救了他们然后钢铁侠回地球和美队吵了一架晕倒。星云知道灭霸在“花园”休息，于是除了晕倒的钢铁侠，一堆其他人去花园，灭霸已经毁灭了所有宝石，然后雷神斩首了灭霸。五年后，蚁人从量子领域出来，找到没化成灰的凯西，然后开始将近一个小时的文戏，反正结果就是钢铁侠发明时空穿越机。雷神在地球建立新阿斯加德，女武神石头人虫子都活着，雷神颓废但还是加入。鹰眼杀人无数，黑寡妇劝他入队成功。钢铁侠小辣椒有了小孩叫摩根，他犹豫再三也入队了。然后所有人分三组穿越时空，去寻找过去的宝石（皮姆粒子有限只够每个人来回穿越一次）第一组，钢铁侠美队绿巨人蚁人去复联1的纽约。心灵宝石：战后，洛基的权杖交给交叉骨和罗斯将军，交叉骨在电梯里和美队相遇致敬美队2电梯大战。美队说了“九头蛇万岁”致敬漫画。交叉骨等人以为他是自己人给了他权杖。美队之后遇到了过去的美队，过去美队以为那是洛基变身的，打了一架，现在的美队剧透过去的美队巴基还活着，趁他松懈击败了他。时间宝石：绿巨人去找古一，和他说奇异博士主动放弃了时间宝石，古一相信，给出了宝石空间宝石：战后空间宝石在过去的钢铁侠手上。钢铁侠蚁人去拿的，蚁人拆了老钢铁侠反应堆，趁乱抢走空间宝石，结果出门时候被过去的绿巨人撞了，混乱中洛基偷走了空间宝石。这时候，钢蚁美绿四人回合，钢美决定穿越去1970年神盾局基地，偷空间宝石和皮姆粒子。基地门口有个司机是斯坦李。期间美队隔着窗见了卡特，钢铁侠化名霍华德配珀（小辣椒的姓）见了他老爸。这里还有电视剧特工卡特里的贾维斯登场。第二队，火箭和雷神去阿斯加德偷现实宝石。开头监狱里的洛基客串。火箭从雷神2在阿斯加德治疗的简身上偷了现实宝石，雷神碰到了他妈，他妈看出雷神来自未来。但雷神没告诉她妈马上她就要死了。雷神顺便带了雷神之锤回现代。第三队，分两拨。星云战争机器去银护1开头的星球偷了星爵偷的力量宝石，但被灭霸发现，过去的星云掉包了现在的星云回到现在。鹰眼黑寡妇去拿灵魂宝石，他们都想牺牲自己，最后黑寡妇死了，鹰眼获得灵魂宝石（ps，我觉得鹰眼人设崩的一塌糊度，他心里最重要的人居然是黑寡妇不是老婆？）然后六颗宝石集齐，绿巨人用众人自制的手套打响指救回消失的人（黑寡妇，幻视，洛基，海姆达尔都没回来，别的都回来了）刚打完，掉包的星云把过去的灭霸军队传送到现在。他们把复联总部炸了。鹰眼带六颗宝石逃跑。钢铁侠美队雷神大战灭霸均被击败，期间美队拿起了雷神之锤，盾牌被打爆。灭霸险些用雷神之斧反杀雷神。这时奇异博士和王传送一堆人过来，加入战斗的有：银河护卫队（除了克拉格林从头到尾没出场），女武神骑了飞行白马，石头人，虫子人，新阿斯加德众人。小辣椒穿着蓝色盔甲，复联3化成灰现在回来的人，瓦坎达部队包括黑豹苏睿奥克耶阿尤等，好像没看到姆巴库和瓦卡比，奇异博士老王和一堆会魔法的人，飞机也是一堆神盾局，瓦坎达，等等飞机都来了。当然还有复联3化成灰现在回来的全部英雄一场大混战。打了一半惊奇队长出现，打爆了灭霸的飞船。本来准备蚁人黄蜂女用小面包车传送宝石回过去的，但灭霸还是抢到了手套，他准备打响指，惊奇队长想阻止，这时灭霸来了个骚操作，扣下力量宝石单独用，一拳打飞了惊队这时奇异博士提示这就是唯一的胜利结局，于是钢铁侠趁乱偷走了灭霸的无限宝石，原来钢铁侠右手也有一个手套，他打响指消灭了灭霸和他的全部部队，自己也死了。结尾钢铁侠葬礼，所有人都来参加了。绿巨人坦白他打响指时想救黑寡妇但是失败了。美队穿越回过去送还宝石，但没有直接回来，留在过去，和卡特结婚了。最后老年美队把盾牌交给猎鹰，猎鹰成为新美队。雷神加入银河护卫队，女武神成为新阿斯加德国王。
 </code></pre>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://m.cffc.site/tag/wY0-vIrWZ" class="tag">
-                    娱乐
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://m.cffc.site/post/Domain-List">
-                  <h3 class="post-title">
-                    目前的域名分配情况
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
           </div>
-
         </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://m.cffc.site/post/Domain-List">
+              <h3 class="post-title">
+                下一篇：目前的域名分配情况
+              </h3>
+            </a>
+          </div>
+          
       </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">CFFC官方网站</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by CFFC Technology Group
+</div>
+
+
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
